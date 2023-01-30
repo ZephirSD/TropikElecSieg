@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:tropikelec/Screen/PageBaterie.dart';
 import 'Screen/PageDonnees.dart';
 
 void main() {
@@ -39,7 +40,7 @@ class _Home2WidgetState extends State<Home2Widget> {
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => NavDonnees(),
+          builder: (context) => NavPageBaterie(),
         ),
       ),
     );
