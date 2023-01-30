@@ -11,50 +11,14 @@ class NavDonnees extends StatefulWidget {
   State<NavDonnees> createState() => _NavDonneesState();
 }
 
-int selectedPage = 0;
-final _pageOptions = [NavDonnees(), NavDonnees(), NavDonnees()];
-
 class _NavDonneesState extends State<NavDonnees> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: Text('Menu'), backgroundColor: Colors.grey),
         body: PageDonneesBat(),
         //drawer: Widget();
-        bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 180, 180, 180),
-            borderRadius: BorderRadius.circular(25.0),
-          ),
-          child: BottomNavigationBar(
-              items: const <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.lock),
-                  label: 'Protections',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
-                  label: 'Panneau de configuration',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.bar_chart),
-                  label: 'Données',
-                ),
-              ],
-              currentIndex: selectedPage,
-              selectedItemColor: Colors.white,
-              backgroundColor: Colors.transparent,
-              onTap: (index) {
-                setState(() {
-                  selectedPage = index;
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) =>
-                          _pageOptions[selectedPage]));
-                });
-              }),
-        ),
       ),
     );
   }
