@@ -20,8 +20,8 @@ class _NavPageBaterieState extends State<NavPageBaterie> {
         body: new Stack(
           children: <Widget>[
             // ChangePageBat(WidgetPage(), 0, index),
-            ChangePageBat(NavDonnees(), 1, index),
-            // ChangePageBat(WidgetPage(), 2, index),
+            // ChangePageBat(WidgetPage(), 1, index),
+            ChangePageBat(NavDonnees(), 2, index),
           ],
         ), //drawer: Widget();
         bottomNavigationBar: Container(
